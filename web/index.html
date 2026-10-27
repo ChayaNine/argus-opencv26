@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARGUS operator rounds</title>
+<meta name="description" content="Autonomous gauge-reading rounds: OpenCV 5 on AWS Graviton (COOL), an agent that changes how it looks when the evidence is bad, and people who approve every action.">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="app-header">
+  <div class="app-header-left">
+    <a class="logo" href="#/rounds" aria-label="ARGUS home">
+      <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M16 16 L24.5 9" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><circle cx="16" cy="16" r="2.8" fill="currentColor"/></svg>
+    </a>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="#/rounds">argus</a><span class="crumb-sep">/</span><a href="#/rounds" class="crumb-strong">operator-rounds</a>
+    </nav>
+  </div>
+  <div class="app-header-right">
+    <button type="button" class="runner-btn" id="runner-btn" aria-haspopup="dialog">
+      <span class="runner-dot" id="runner-dot"></span><span id="runner-label">Checking runtime</span>
+    </button>
+    <button type="button" class="avatar" id="who-btn" aria-haspopup="dialog" aria-label="Your name for approvals"><span id="who-initials">OP</span></button>
+  </div>
+</header>
+
+<nav class="underline-nav" aria-label="Sections">
+  <a href="#/rounds" data-nav="rounds"><span data-icon="play"></span>Rounds<span class="counter" id="nav-count" hidden></span></a>
+  <a href="#/photo" data-nav="photo"><span data-icon="device-camera"></span>Read a photo</a>
+  <a href="#/evidence" data-nav="evidence"><span data-icon="graph"></span>Evidence</a>
+  <a href="#/how" data-nav="how"><span data-icon="book"></span>How it works</a>
+</nav>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="app-footer">
+  <p>ARGUS is an inspection aid, not a safety system: alarms still belong to the plant's control and safety instrumented systems. Live rounds run on a simulated plant with known true values, so every result can be checked.</p>
+  <ul>
+    <li><a href="/api/docs">API</a></li>
+    <li><a href="/api/runtime">Runtime JSON</a></li>
+    <li><a href="/api/health">Health</a></li>
+  </ul>
+</footer>
+
+<dialog id="dlg" class="overlay" aria-labelledby="dlg-title">
+  <div class="overlay-header">
+    <h2 id="dlg-title">Dialog</h2>
+    <button type="button" class="btn-octicon" data-close aria-label="Close"><span data-icon="x"></span></button>
+  </div>
+  <div class="overlay-body" id="dlg-body"></div>
+  <div class="overlay-footer" id="dlg-footer"></div>
+</dialog>
+
+<dialog id="lightbox" class="overlay lightbox" aria-label="Image">
+  <div class="overlay-header">
+    <h2 id="lightbox-title">Evidence image</h2>
+    <button type="button" class="btn-octicon" data-close aria-label="Close"><span data-icon="x"></span></button>
+  </div>
+  <div class="overlay-body"><img id="lightbox-img" alt=""></div>
+</dialog>
+
+<script src="/static/icons.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

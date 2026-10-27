@@ -1,0 +1,1063 @@
+{
+ "single": [
+  {
+   "file": "clean_PG-105.jpg",
+   "spec": {
+    "id": "PG-105",
+    "name": "Instrument air header",
+    "units": "psi",
+    "min_value": 0,
+    "max_value": 160,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": 70,
+    "low_warn": 85,
+    "high_warn": 125,
+    "high_alarm": null,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 1,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 1",
+    "span": 160
+   },
+   "predicted_H": [
+    [
+     3.7042616900723093,
+     -0.034313001393470835,
+     625.6318164259
+    ],
+    [
+     0.002064056087859463,
+     3.669788916558245,
+     258.73084551216795
+    ],
+    [
+     5.733489132942954e-06,
+     -5.68932404744072e-05,
+     1.0
+    ]
+   ],
+   "profile": "clean"
+  },
+  {
+   "file": "clean_PG-106.jpg",
+   "spec": {
+    "id": "PG-106",
+    "name": "Cooling water return",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 10,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 1.5,
+    "high_warn": 6,
+    "high_alarm": 8,
+    "criticality": "low",
+    "needle_color": "black",
+    "marker_id": 2,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 2",
+    "span": 10
+   },
+   "predicted_H": [
+    [
+     3.7066852611385817,
+     -0.05075410014496576,
+     553.9333260897891
+    ],
+    [
+     0.0018152763712882196,
+     3.650797320414367,
+     303.5613843689333
+    ],
+    [
+     5.042434364689499e-06,
+     -8.356319144662753e-05,
+     1.0
+    ]
+   ],
+   "profile": "clean"
+  },
+  {
+   "file": "clean_PG-107.jpg",
+   "spec": {
+    "id": "PG-107",
+    "name": "Nitrogen blanket pressure",
+    "units": "mbar",
+    "min_value": 0,
+    "max_value": 250,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 6,
+    "minor_per_major": 4,
+    "low_alarm": 20,
+    "low_warn": 40,
+    "high_warn": 180,
+    "high_alarm": 220,
+    "criticality": "high",
+    "needle_color": "red",
+    "marker_id": 3,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 3",
+    "span": 250
+   },
+   "predicted_H": [
+    [
+     3.756571785992523,
+     -0.038309693545616655,
+     640.8474453284746
+    ],
+    [
+     -0.0001565226720463676,
+     3.724113473403521,
+     261.0617246173513
+    ],
+    [
+     -4.347852001287988e-07,
+     -5.960213154194336e-05,
+     1.0
+    ]
+   ],
+   "profile": "clean"
+  },
+  {
+   "file": "clean_PG-108.jpg",
+   "spec": {
+    "id": "PG-108",
+    "name": "Hydraulic unit HPU-3 pressure",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 250,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 6,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 120,
+    "high_warn": 210,
+    "high_alarm": 230,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 4,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 2, position 1",
+    "span": 250
+   },
+   "predicted_H": [
+    [
+     3.7901769905767377,
+     -0.07009209536131678,
+     596.3207010559639
+    ],
+    [
+     -4.212700252979233e-05,
+     3.712585470448456,
+     318.5262779730666
+    ],
+    [
+     -1.1701945147164537e-07,
+     -0.00010939156055620806,
+     1.0
+    ]
+   ],
+   "profile": "clean"
+  },
+  {
+   "file": "glare_TG-110.jpg",
+   "spec": {
+    "id": "TG-110",
+    "name": "Sample cooler outlet temperature",
+    "units": "\u00b0C",
+    "min_value": 0,
+    "max_value": 100,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 45,
+    "high_alarm": 60,
+    "criticality": "low",
+    "needle_color": "red",
+    "marker_id": 1,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 1",
+    "span": 100
+   },
+   "predicted_H": [
+    [
+     3.730968463722802,
+     -0.027200117479996146,
+     684.7702638356309
+    ],
+    [
+     -0.004162337518520896,
+     3.7204482699687618,
+     221.29380810741594
+    ],
+    [
+     -1.1562048662558045e-05,
+     -3.812606267157599e-05,
+     1.0
+    ]
+   ],
+   "profile": "glare"
+  },
+  {
+   "file": "glare_PG-101.jpg",
+   "spec": {
+    "id": "PG-101",
+    "name": "Pump P-101 discharge pressure",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 16,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": 2,
+    "low_warn": 4,
+    "high_warn": 10,
+    "high_alarm": 12,
+    "criticality": "high",
+    "needle_color": "black",
+    "marker_id": 2,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 2",
+    "span": 16
+   },
+   "predicted_H": [
+    [
+     3.6915456997407343,
+     -0.06393228876191413,
+     670.3671919096874
+    ],
+    [
+     0.000764344932129822,
+     3.6192899199059467,
+     287.64046001257833
+    ],
+    [
+     2.1231803670272837e-06,
+     -0.00010210336417728899,
+     1.0
+    ]
+   ],
+   "profile": "glare"
+  },
+  {
+   "file": "glare_PG-102.jpg",
+   "spec": {
+    "id": "PG-102",
+    "name": "Pump P-101 suction pressure",
+    "units": "bar",
+    "min_value": -1,
+    "max_value": 3,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": -0.5,
+    "low_warn": 0.0,
+    "high_warn": 2.0,
+    "high_alarm": 2.5,
+    "criticality": "high",
+    "needle_color": "black",
+    "marker_id": 3,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 3",
+    "span": 4
+   },
+   "predicted_H": [
+    [
+     3.742145428860999,
+     -0.0777879931427257,
+     750.958917380523
+    ],
+    [
+     -0.002685031142050408,
+     3.6648996469603814,
+     253.13136879698456
+    ],
+    [
+     -7.45841983902891e-06,
+     -0.00011303270654161955,
+     1.0
+    ]
+   ],
+   "profile": "glare"
+  },
+  {
+   "file": "glare_PDG-103.jpg",
+   "spec": {
+    "id": "PDG-103",
+    "name": "Filter F-201 differential pressure",
+    "units": "kPa",
+    "min_value": 0,
+    "max_value": 100,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 60,
+    "high_alarm": 80,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 4,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 2, position 1",
+    "span": 100
+   },
+   "predicted_H": [
+    [
+     3.7118326784287246,
+     -0.03643768450851471,
+     629.745374740787
+    ],
+    [
+     -0.0010786033508477276,
+     3.6840741772528927,
+     341.3873176976144
+    ],
+    [
+     -2.996120419021465e-06,
+     -5.527512391005998e-05,
+     1.0
+    ]
+   ],
+   "profile": "glare"
+  },
+  {
+   "file": "night_PDG-103.jpg",
+   "spec": {
+    "id": "PDG-103",
+    "name": "Filter F-201 differential pressure",
+    "units": "kPa",
+    "min_value": 0,
+    "max_value": 100,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 60,
+    "high_alarm": 80,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 1,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 1",
+    "span": 100
+   },
+   "predicted_H": [
+    [
+     3.7622842552521623,
+     -0.03068698019955478,
+     621.0704224132326
+    ],
+    [
+     0.0018343539122897656,
+     3.732858742680332,
+     296.11614535003434
+    ],
+    [
+     5.095427534138238e-06,
+     -5.0490624445530704e-05,
+     1.0
+    ]
+   ],
+   "profile": "night"
+  },
+  {
+   "file": "night_TG-104.jpg",
+   "spec": {
+    "id": "TG-104",
+    "name": "Boiler feed line temperature",
+    "units": "\u00b0C",
+    "min_value": 0,
+    "max_value": 160,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 60,
+    "high_warn": 120,
+    "high_alarm": 140,
+    "criticality": "high",
+    "needle_color": "red",
+    "marker_id": 2,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 2",
+    "span": 160
+   },
+   "predicted_H": [
+    [
+     3.810842692107508,
+     0.017594137728828025,
+     684.1566985916074
+    ],
+    [
+     -0.003400414942387889,
+     3.82425956048009,
+     286.6814382601299
+    ],
+    [
+     -9.445597062188581e-06,
+     2.5181421452098926e-05,
+     1.0
+    ]
+   ],
+   "profile": "night"
+  },
+  {
+   "file": "night_PG-105.jpg",
+   "spec": {
+    "id": "PG-105",
+    "name": "Instrument air header",
+    "units": "psi",
+    "min_value": 0,
+    "max_value": 160,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": 70,
+    "low_warn": 85,
+    "high_warn": 125,
+    "high_alarm": null,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 3,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 3",
+    "span": 160
+   },
+   "predicted_H": [
+    [
+     3.7542173562062033,
+     -0.03033451474471145,
+     635.1985691285498
+    ],
+    [
+     0.0004041800560037654,
+     3.728958852873393,
+     289.28326920345285
+    ],
+    [
+     1.1227223777882372e-06,
+     -4.793070526841398e-05,
+     1.0
+    ]
+   ],
+   "profile": "night"
+  },
+  {
+   "file": "night_PG-106.jpg",
+   "spec": {
+    "id": "PG-106",
+    "name": "Cooling water return",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 10,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 1.5,
+    "high_warn": 6,
+    "high_alarm": 8,
+    "criticality": "low",
+    "needle_color": "black",
+    "marker_id": 4,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 2, position 1",
+    "span": 10
+   },
+   "predicted_H": [
+    [
+     3.805826601446053,
+     0.029904824229999342,
+     682.8549932447467
+    ],
+    [
+     -0.00024620437286378664,
+     3.8162427125161194,
+     304.20009426969904
+    ],
+    [
+     -6.839010357327406e-07,
+     4.641654961193586e-05,
+     1.0
+    ]
+   ],
+   "profile": "night"
+  },
+  {
+   "file": "vibration_PG-105.jpg",
+   "spec": {
+    "id": "PG-105",
+    "name": "Instrument air header",
+    "units": "psi",
+    "min_value": 0,
+    "max_value": 160,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": 70,
+    "low_warn": 85,
+    "high_warn": 125,
+    "high_alarm": null,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 1,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 1",
+    "span": 160
+   },
+   "predicted_H": [
+    [
+     3.702084432811579,
+     -0.04871666808609073,
+     504.2681649272414
+    ],
+    [
+     0.003419412326541357,
+     3.642877597941704,
+     287.9496507564565
+    ],
+    [
+     9.498367573725991e-06,
+     -8.423271661365823e-05,
+     1.0
+    ]
+   ],
+   "profile": "vibration"
+  },
+  {
+   "file": "vibration_PG-106.jpg",
+   "spec": {
+    "id": "PG-106",
+    "name": "Cooling water return",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 10,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 1.5,
+    "high_warn": 6,
+    "high_alarm": 8,
+    "criticality": "low",
+    "needle_color": "black",
+    "marker_id": 2,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 2",
+    "span": 10
+   },
+   "predicted_H": [
+    [
+     3.76312106900771,
+     -0.044616324153188135,
+     618.0399773005101
+    ],
+    [
+     0.0016761676544369258,
+     3.7132480050170242,
+     353.4989043203805
+    ],
+    [
+     6.770092747043359e-06,
+     -7.598708381872754e-05,
+     1.0
+    ]
+   ],
+   "profile": "vibration"
+  },
+  {
+   "file": "vibration_PG-107.jpg",
+   "spec": {
+    "id": "PG-107",
+    "name": "Nitrogen blanket pressure",
+    "units": "mbar",
+    "min_value": 0,
+    "max_value": 250,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 6,
+    "minor_per_major": 4,
+    "low_alarm": 20,
+    "low_warn": 40,
+    "high_warn": 180,
+    "high_alarm": 220,
+    "criticality": "high",
+    "needle_color": "red",
+    "marker_id": 3,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 3",
+    "span": 250
+   },
+   "predicted_H": [
+    [
+     3.6727404462655153,
+     -0.055543833691341124,
+     606.0939136685533
+    ],
+    [
+     0.0018685501641210835,
+     3.615085049974052,
+     283.31466353606146
+    ],
+    [
+     2.2472564788258727e-06,
+     -8.713990349155502e-05,
+     1.0
+    ]
+   ],
+   "profile": "vibration"
+  },
+  {
+   "file": "vibration_PG-108.jpg",
+   "spec": {
+    "id": "PG-108",
+    "name": "Hydraulic unit HPU-3 pressure",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 250,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 6,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 120,
+    "high_warn": 210,
+    "high_alarm": 230,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 4,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 2, position 1",
+    "span": 250
+   },
+   "predicted_H": [
+    [
+     3.7003988396434897,
+     0.014741966327239805,
+     630.5131484019256
+    ],
+    [
+     0.0019982634964575987,
+     3.7038174950077054,
+     241.0695945688621
+    ],
+    [
+     5.55073193460444e-06,
+     2.439119612004804e-05,
+     1.0
+    ]
+   ],
+   "profile": "vibration"
+  },
+  {
+   "file": "hard_PG-108.jpg",
+   "spec": {
+    "id": "PG-108",
+    "name": "Hydraulic unit HPU-3 pressure",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 250,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 6,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": 120,
+    "high_warn": 210,
+    "high_alarm": 230,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 1,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 1",
+    "span": 250
+   },
+   "predicted_H": [
+    [
+     3.746825909630118,
+     -0.08176737152328392,
+     662.2251136071031
+    ],
+    [
+     0.0004465342225751936,
+     3.6442679585430815,
+     195.09604664006883
+    ],
+    [
+     1.2403728404866488e-06,
+     -0.0001294023508230993,
+     1.0
+    ]
+   ],
+   "profile": "hard"
+  },
+  {
+   "file": "hard_PG-109.jpg",
+   "spec": {
+    "id": "PG-109",
+    "name": "Chiller CH-2 condenser pressure",
+    "units": "psi",
+    "min_value": 0,
+    "max_value": 300,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 7,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 220,
+    "high_alarm": 260,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 2,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 2",
+    "span": 300
+   },
+   "predicted_H": [
+    [
+     3.678838601496854,
+     -0.012657798258478303,
+     645.161677089642
+    ],
+    [
+     -0.0027807713024259827,
+     3.6758493602400115,
+     199.53087730687585
+    ],
+    [
+     -7.299649646579127e-06,
+     -1.864748720490928e-05,
+     1.0
+    ]
+   ],
+   "profile": "hard"
+  },
+  {
+   "file": "hard_TG-110.jpg",
+   "spec": {
+    "id": "TG-110",
+    "name": "Sample cooler outlet temperature",
+    "units": "\u00b0C",
+    "min_value": 0,
+    "max_value": 100,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 45,
+    "high_alarm": 60,
+    "criticality": "low",
+    "needle_color": "red",
+    "marker_id": 3,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 3",
+    "span": 100
+   },
+   "predicted_H": [
+    [
+     3.756887614359623,
+     0.032142347878073976,
+     635.5173895362673
+    ],
+    [
+     0.0019372695150177894,
+     3.7636994147180887,
+     283.95647158515567
+    ],
+    [
+     5.381304208382749e-06,
+     5.305106946533489e-05,
+     1.0
+    ]
+   ],
+   "profile": "hard"
+  },
+  {
+   "file": "hard_PG-101.jpg",
+   "spec": {
+    "id": "PG-101",
+    "name": "Pump P-101 discharge pressure",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 16,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": 2,
+    "low_warn": 4,
+    "high_warn": 10,
+    "high_alarm": 12,
+    "criticality": "high",
+    "needle_color": "black",
+    "marker_id": 4,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 2, position 1",
+    "span": 16
+   },
+   "predicted_H": [
+    [
+     3.7046018345029754,
+     -0.061174620345314505,
+     684.6384907802523
+    ],
+    [
+     -0.0013178357860935462,
+     3.644471731478926,
+     384.91194707300275
+    ],
+    [
+     -2.9155908605902456e-06,
+     -9.323049754471935e-05,
+     1.0
+    ]
+   ],
+   "profile": "hard"
+  },
+  {
+   "file": "random_TG-110.jpg",
+   "spec": {
+    "id": "TG-110",
+    "name": "Sample cooler outlet temperature",
+    "units": "\u00b0C",
+    "min_value": 0,
+    "max_value": 100,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 45,
+    "high_alarm": 60,
+    "criticality": "low",
+    "needle_color": "red",
+    "marker_id": 1,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 1",
+    "span": 100
+   },
+   "predicted_H": [
+    [
+     3.709358845700556,
+     -0.00905756998350929,
+     637.2920338687488
+    ],
+    [
+     0.0015358605718290054,
+     3.7006665459215635,
+     279.02911673449967
+    ],
+    [
+     4.266279366191682e-06,
+     -1.4782291262962598e-05,
+     1.0
+    ]
+   ],
+   "profile": "random"
+  },
+  {
+   "file": "random_PG-101.jpg",
+   "spec": {
+    "id": "PG-101",
+    "name": "Pump P-101 discharge pressure",
+    "units": "bar",
+    "min_value": 0,
+    "max_value": 16,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": 2,
+    "low_warn": 4,
+    "high_warn": 10,
+    "high_alarm": 12,
+    "criticality": "high",
+    "needle_color": "black",
+    "marker_id": 2,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 2",
+    "span": 16
+   },
+   "predicted_H": [
+    [
+     3.7296067230499435,
+     -0.028243525131250738,
+     721.4737300307277
+    ],
+    [
+     -0.0032351538609218613,
+     3.7157993114823142,
+     198.96348984580348
+    ],
+    [
+     -8.986538502560728e-06,
+     -4.050367816884531e-05,
+     1.0
+    ]
+   ],
+   "profile": "random"
+  },
+  {
+   "file": "random_PG-102.jpg",
+   "spec": {
+    "id": "PG-102",
+    "name": "Pump P-101 suction pressure",
+    "units": "bar",
+    "min_value": -1,
+    "max_value": 3,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 9,
+    "minor_per_major": 4,
+    "low_alarm": -0.5,
+    "low_warn": 0.0,
+    "high_warn": 2.0,
+    "high_alarm": 2.5,
+    "criticality": "high",
+    "needle_color": "black",
+    "marker_id": 3,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 1, position 3",
+    "span": 4
+   },
+   "predicted_H": [
+    [
+     3.7028902673573247,
+     -0.08267975765651182,
+     643.6996199480185
+    ],
+    [
+     0.0005797972219140397,
+     3.5970877241223755,
+     242.6564288124545
+    ],
+    [
+     1.61054783865011e-06,
+     -0.0001313723551372134,
+     1.0
+    ]
+   ],
+   "profile": "random"
+  },
+  {
+   "file": "random_PDG-103.jpg",
+   "spec": {
+    "id": "PDG-103",
+    "name": "Filter F-201 differential pressure",
+    "units": "kPa",
+    "min_value": 0,
+    "max_value": 100,
+    "theta_min": -135.0,
+    "theta_max": 135.0,
+    "major_ticks": 11,
+    "minor_per_major": 4,
+    "low_alarm": null,
+    "low_warn": null,
+    "high_warn": 60,
+    "high_alarm": 80,
+    "criticality": "medium",
+    "needle_color": "black",
+    "marker_id": 4,
+    "dial_radius_mm": 50.0,
+    "location": "Bay 2, position 1",
+    "span": 100
+   },
+   "predicted_H": [
+    [
+     3.7483434387648167,
+     -0.06301349666579711,
+     614.8659663726708
+    ],
+    [
+     -0.00039027988689392836,
+     3.6857828018085597,
+     196.5501935394015
+    ],
+    [
+     -2.21018620329572e-06,
+     -9.570704313323018e-05,
+     1.0
+    ]
+   ],
+   "profile": "random"
+  }
+ ],
+ "burst": {
+  "files": [
+   "burst_0.jpg",
+   "burst_1.jpg",
+   "burst_2.jpg",
+   "burst_3.jpg",
+   "burst_4.jpg",
+   "burst_5.jpg",
+   "burst_6.jpg",
+   "burst_7.jpg",
+   "burst_8.jpg"
+  ],
+  "spec": {
+   "id": "PDG-103",
+   "name": "Filter F-201 differential pressure",
+   "units": "kPa",
+   "min_value": 0,
+   "max_value": 100,
+   "theta_min": -135.0,
+   "theta_max": 135.0,
+   "major_ticks": 11,
+   "minor_per_major": 4,
+   "low_alarm": null,
+   "low_warn": null,
+   "high_warn": 60,
+   "high_alarm": 80,
+   "criticality": "medium",
+   "needle_color": "black",
+   "marker_id": 1,
+   "dial_radius_mm": 50.0,
+   "location": "Bay 1, position 1",
+   "span": 100
+  },
+  "predicted_H": [
+   [
+    3.732045125131177,
+    -0.025815085136853967,
+    620.0863393609474
+   ],
+   [
+    5.571718563112332e-06,
+    3.7123274942407027,
+    214.4028382750125
+   ],
+   [
+    1.5476996008645366e-08,
+    -4.034228181568111e-05,
+    1.0
+   ]
+  ]
+ }
+}

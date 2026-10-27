@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 656" font-family="Archivo, 'Segoe UI', system-ui, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">ARGUS agent workflow: perception, decision, action, guard, human</title>
+  <desc id="d">For each gauge the agent captures images, OpenCV measures and judges the evidence, the agent either accepts, re-plans a new capture from the issues it saw, or escalates; a safety guard checks every action; people confirm readings and approve work orders, which are dispatched through SNS.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4b5661"/></marker>
+    <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#08779f"/></marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5541c0"/></marker>
+    <style>
+      .b{fill:#ffffff;stroke:#4b5661;stroke-width:1.3}
+      .p{fill:#def0f7;stroke:#08779f;stroke-width:1.8}
+      .g{fill:#ebe7fb;stroke:#5541c0;stroke-width:1.5}
+      .h{font-size:15px;font-weight:700;fill:#1c2228}
+      .t{font-size:12.5px;fill:#1c2228}
+      .s{font-size:11.5px;fill:#4b5661}
+      .k{font-size:12px;font-weight:700;fill:#08779f}
+      .v{font-size:12px;font-weight:700;fill:#5541c0}
+      .ln{stroke:#4b5661;stroke-width:1.5;fill:none}
+      .lc{stroke:#08779f;stroke-width:2.2;fill:none}
+      .lh{stroke:#5541c0;stroke-width:1.6;fill:none}
+      .lbl{font-size:11.5px;fill:#4b5661}
+    </style>
+  </defs>
+  <rect width="1200" height="656" fill="#eceef0"/>
+  <text class="h" x="24" y="28">One gauge, end to end. Every arrow is a logged trace event (CloudWatch and downloadable JSON).</text>
+  <g transform="translate(0,36)">
+
+  <!-- Perceive -->
+  <rect class="p" x="24" y="64" width="250" height="196" rx="8"/>
+  <text class="k" x="40" y="88">PERCEIVE (OpenCV 5 on COOL)</text>
+  <text class="t" x="40" y="112">capture: view, zoom, EV, burst,</text>
+  <text class="t" x="40" y="128">HDR, spotlight, fast shutter</text>
+  <text class="s" x="40" y="152">ArUco homography, rim ellipse,</text>
+  <text class="s" x="40" y="168">hub re-centring, polar needle,</text>
+  <text class="s" x="40" y="184">tick-pattern scale check</text>
+  <text class="s" x="40" y="208">quality issues: glare on needle,</text>
+  <text class="s" x="40" y="224">flutter, blur, noise, oblique,</text>
+  <text class="s" x="40" y="240">occlusion, low contrast</text>
+
+  <!-- Decide -->
+  <rect class="b" x="340" y="64" width="270" height="196" rx="8"/>
+  <text class="h" x="356" y="90">DECIDE (inspector agent)</text>
+  <text class="t" x="356" y="114">Claude on Bedrock (Converse tool use)</text>
+  <text class="t" x="356" y="130">or the deterministic policy</text>
+  <text class="s" x="356" y="156">inputs: issue codes, metrics, value,</text>
+  <text class="s" x="356" y="172">sigma, confidence, limit check,</text>
+  <text class="s" x="356" y="188">trend, lessons from earlier gauges</text>
+  <text class="s" x="356" y="214">writes one sentence of reasoning</text>
+  <text class="s" x="356" y="230">before every action (shown to</text>
+  <text class="s" x="356" y="246">operators in the console)</text>
+  <path class="ln" d="M274 162H336" marker-end="url(#a)"/>
+  <text class="lbl" x="280" y="154">evidence</text>
+
+  <!-- three outcomes -->
+  <rect class="b" x="676" y="54" width="250" height="86" rx="8"/>
+  <text class="h" x="692" y="78">Re-plan the next look</text>
+  <text class="s" x="692" y="98">glare: move left/right or HDR; flutter:</text>
+  <text class="s" x="692" y="114">9 fast frames; night: light, more frames;</text>
+  <text class="s" x="692" y="130">haze: CLAHE; occlusion: change view</text>
+
+  <rect class="b" x="676" y="156" width="250" height="70" rx="8"/>
+  <text class="h" x="692" y="180">Accept and record</text>
+  <text class="s" x="692" y="200">confidence ≥ 0.6, ±2σ interval clear of</text>
+  <text class="s" x="692" y="216">limits; alarm or fault → draft work order</text>
+
+  <rect class="b" x="676" y="242" width="250" height="70" rx="8"/>
+  <text class="h" x="692" y="266">Escalate</text>
+  <text class="s" x="692" y="286">budget used (6 captures) or evidence</text>
+  <text class="s" x="692" y="302">cannot be made trustworthy</text>
+
+  <path class="ln" d="M610 140L672 98" marker-end="url(#a)"/>
+  <path class="ln" d="M610 168L672 190" marker-end="url(#a)"/>
+  <path class="ln" d="M610 210L672 272" marker-end="url(#a)"/>
+
+  <!-- the loop back: visual evidence changes the next action -->
+  <path class="lc" d="M801 54V36H150V60" marker-end="url(#ac)"/>
+  <text class="k" x="300" y="30">the visual evidence changes the next tool call (new capture settings)</text>
+
+  <!-- Guard -->
+  <rect class="g" x="676" y="352" width="250" height="118" rx="8"/>
+  <text class="v" x="692" y="376">SAFETY GUARD (every call)</text>
+  <text class="s" x="692" y="398">only values read_gauge measured</text>
+  <text class="s" x="692" y="414">no low-confidence or straddling records</text>
+  <text class="s" x="692" y="430">alarms and faults must get a work order</text>
+  <text class="s" x="692" y="446">priority can be raised, never lowered</text>
+  <text class="s" x="692" y="462">capture and tool-call budgets</text>
+  <path class="lh" d="M801 312V348" marker-end="url(#ah)"/>
+  <path class="lh" d="M926 97H956V411H930" marker-end="url(#ah)"/>
+  <path class="lh" d="M926 191H956"/>
+  <text class="v" x="964" y="250">every call</text>
+  <text class="v" x="964" y="266">is checked</text>
+  <text class="lbl" x="676" y="490">rejected calls are returned to the agent with the reason</text>
+
+  <!-- Human -->
+  <rect class="g" x="340" y="352" width="270" height="118" rx="8"/>
+  <text class="v" x="356" y="376">PEOPLE IN THE LOOP</text>
+  <text class="s" x="356" y="398">confirm or correct escalated readings</text>
+  <text class="s" x="356" y="414">approve or reject draft work orders</text>
+  <text class="s" x="356" y="430">operator-confirmed alarms auto-draft</text>
+  <text class="s" x="356" y="446">a work order for approval</text>
+  <text class="s" x="356" y="462">the agent cannot dispatch anything</text>
+  <path class="lh" d="M672 411H614" marker-end="url(#ah)"/>
+
+  <!-- Dispatch -->
+  <rect class="b" x="24" y="352" width="250" height="118" rx="8"/>
+  <text class="h" x="40" y="378">ACT IN THE PLANT</text>
+  <text class="s" x="40" y="400">approved work order published to</text>
+  <text class="s" x="40" y="416">Amazon SNS (email / CMMS webhook)</text>
+  <text class="s" x="40" y="440">shift hand-over report written</text>
+  <text class="s" x="40" y="456">from the round's facts</text>
+  <path class="ln" d="M336 411H278" marker-end="url(#a)"/>
+
+  <!-- failure handling -->
+  <rect class="b" x="24" y="510" width="1152" height="88" rx="8"/>
+  <text class="h" x="40" y="536">Failure handling and observability</text>
+  <text class="s" x="40" y="558">Bedrock error, throttling, timeout or malformed output → the gauge is handed to the deterministic policy (same tools, same guard) and a fallback event is logged; two failures in a row open a</text>
+  <text class="s" x="40" y="576">circuit breaker for the round. The agent finishing without closing a gauge → the guard escalates it. Every step: CloudWatch JSON log, metrics (automated, escalated, fallbacks, cost), S3 trace archive.</text>
+  </g>
+</svg>

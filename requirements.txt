@@ -1,0 +1,10 @@
+# Application dependencies.  OpenCV is deliberately NOT listed here:
+#   - on the COOL AMI the app uses COOL's OpenCV 5 build (/opt/cool) and must not pull a pip wheel over it;
+#   - everywhere else install requirements-opencv.txt as well.
+fastapi==0.162.0
+starlette==1.7.0
+uvicorn==0.54.0
+pydantic==2.13.5
+python-multipart==0.0.32
+boto3==1.43.118
+mcp==2.3.0

@@ -1,0 +1,3 @@
+# Stock OpenCV 5 (the "DIY" baseline in the COOL benchmark, and for local development).
+opencv-python-headless==5.0.0.93
+numpy==2.5.3

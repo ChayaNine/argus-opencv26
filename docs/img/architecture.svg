@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Archivo, 'Segoe UI', system-ui, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">ARGUS deployed architecture on AWS</title>
+  <desc id="d">Browser to CloudFront to an EC2 Graviton4 instance running COOL OpenCV 5 and the ARGUS service; the service calls Amazon Bedrock, writes evidence to S3, logs and metrics to CloudWatch, publishes approved work orders to SNS, and is operated through Systems Manager.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4b5661"/></marker>
+    <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#08779f"/></marker>
+    <style>
+      .box{fill:#f5f6f7;stroke:#8a949d;stroke-width:1.2}
+      .grp{fill:none;stroke:#8a949d;stroke-width:1.2;stroke-dasharray:5 4}
+      .arm{fill:#def0f7;stroke:#08779f;stroke-width:2}
+      .cool{fill:#ffffff;stroke:#08779f;stroke-width:1.4}
+      .svc{fill:#ffffff;stroke:#4b5661;stroke-width:1.2}
+      .h{font-size:15px;font-weight:700;fill:#1c2228}
+      .t{font-size:12.5px;fill:#1c2228}
+      .s{font-size:11.5px;fill:#4b5661}
+      .c{font-size:12px;fill:#08779f;font-weight:700}
+      .ln{stroke:#4b5661;stroke-width:1.4;fill:none}
+      .lc{stroke:#08779f;stroke-width:1.8;fill:none}
+      .lbl{font-size:11px;fill:#4b5661}
+    </style>
+  </defs>
+  <rect width="1200" height="700" fill="#eceef0"/>
+
+  <!-- viewer -->
+  <rect class="box" x="24" y="64" width="150" height="86" rx="6"/>
+  <text class="h" x="38" y="92">Operators,</text>
+  <text class="h" x="38" y="110">judges</text>
+  <text class="s" x="38" y="132">browser or phone</text>
+
+  <!-- CloudFront -->
+  <rect class="svc" x="206" y="56" width="214" height="102" rx="6"/>
+  <text class="h" x="220" y="82">Amazon CloudFront</text>
+  <text class="s" x="220" y="102">HTTPS, HTTP/3, security headers</text>
+  <text class="s" x="220" y="120">static assets cached at the edge</text>
+  <text class="s" x="220" y="138">adds the origin secret header</text>
+  <path class="ln" d="M174 107H202" marker-end="url(#a)"/>
+  <text class="lbl" x="170" y="176">HTTPS</text>
+
+  <!-- VPC -->
+  <rect class="grp" x="452" y="30" width="470" height="520" rx="10"/>
+  <text class="s" x="466" y="50">VPC: port 8080 reachable only from CloudFront; no SSH</text>
+  <path class="ln" d="M420 107H476" marker-end="url(#a)"/>
+  <text class="lbl" x="426" y="126">:8080</text>
+
+  <!-- EC2 Graviton -->
+  <rect class="arm" x="478" y="64" width="420" height="466" rx="8"/>
+  <text class="h" x="494" y="90">EC2 c8g.xlarge, AWS Graviton4 (Arm Neoverse-V2)</text>
+  <text class="s" x="494" y="108">IMDSv2 only, encrypted gp3, least-privilege role, auto-recovery alarm</text>
+
+  <rect class="cool" x="494" y="122" width="388" height="72" rx="6"/>
+  <text class="c" x="508" y="144">COOL: Cloud-Optimized OpenCV Library, OpenCV 5.0</text>
+  <text class="s" x="508" y="162">AWS Marketplace AMI, /opt/cool, KleidiCV Arm kernels</text>
+  <text class="s" x="508" y="180">verified at runtime: module path, version, build flags, CPU part</text>
+
+  <rect class="box" x="494" y="206" width="388" height="310" rx="6"/>
+  <text class="h" x="508" y="230">ARGUS service (FastAPI, unprivileged)</text>
+
+  <rect class="svc" x="508" y="244" width="176" height="122" rx="5"/>
+  <text class="t" x="518" y="264" font-weight="700">Perception on COOL</text>
+  <text class="s" x="518" y="282">ArUco + homography</text>
+  <text class="s" x="518" y="298">rim ellipse, hub re-centring</text>
+  <text class="s" x="518" y="314">warpPolar needle, tick match</text>
+  <text class="s" x="518" y="330">HDR fusion, CLAHE, inpaint</text>
+  <text class="s" x="518" y="346">quality issues, ±2σ</text>
+
+  <rect class="svc" x="694" y="244" width="174" height="122" rx="5"/>
+  <text class="t" x="704" y="264" font-weight="700">Inspector agent</text>
+  <text class="s" x="704" y="282">Bedrock LLM (tool use)</text>
+  <text class="s" x="704" y="298">or deterministic policy</text>
+  <text class="s" x="704" y="314">fallback + circuit breaker</text>
+  <text class="s" x="704" y="330">shift hand-over report</text>
+  <text class="s" x="704" y="346">MCP server, same tools</text>
+
+  <rect class="svc" x="508" y="378" width="176" height="62" rx="5"/>
+  <text class="t" x="518" y="398" font-weight="700">Safety guard</text>
+  <text class="s" x="518" y="416">only measured, trusted values</text>
+  <text class="s" x="518" y="432">alarms need a work order</text>
+
+  <rect class="svc" x="694" y="378" width="174" height="62" rx="5"/>
+  <text class="t" x="704" y="398" font-weight="700">Robot camera adapter</text>
+  <text class="s" x="704" y="416">simulated PTZ robot with</text>
+  <text class="s" x="704" y="432">ground truth (eval, demo)</text>
+
+  <rect class="svc" x="508" y="452" width="360" height="52" rx="5"/>
+  <text class="t" x="518" y="472" font-weight="700">Operator console</text>
+  <text class="s" x="518" y="490">live trace, ±2σ dials, review queue, approvals, photo mode</text>
+
+  <path class="ln" d="M684 300H694"/>
+  <path class="ln" d="M781 366V378"/>
+  <path class="ln" d="M596 366V378"/>
+
+  <!-- AWS services right -->
+  <g>
+    <rect class="svc" x="960" y="64" width="216" height="74" rx="6"/>
+    <text class="h" x="974" y="88">Amazon Bedrock</text>
+    <text class="s" x="974" y="106">Claude Haiku 4.5, Converse API</text>
+    <text class="s" x="974" y="122">tool use, prompt caching</text>
+
+    <rect class="svc" x="960" y="152" width="216" height="74" rx="6"/>
+    <text class="h" x="974" y="176">Amazon S3</text>
+    <text class="s" x="974" y="194">traces, evidence images, results</text>
+    <text class="s" x="974" y="210">private, SSE, TLS-only, lifecycle</text>
+
+    <rect class="svc" x="960" y="240" width="216" height="90" rx="6"/>
+    <text class="h" x="974" y="264">Amazon CloudWatch</text>
+    <text class="s" x="974" y="282">every agent step as JSON logs</text>
+    <text class="s" x="974" y="298">metrics, dashboard, fallback alarm</text>
+    <text class="s" x="974" y="314">EC2 status-check auto-recovery</text>
+
+    <rect class="svc" x="960" y="344" width="216" height="74" rx="6"/>
+    <text class="h" x="974" y="368">Amazon SNS</text>
+    <text class="s" x="974" y="386">human-approved work orders</text>
+    <text class="s" x="974" y="402">to email or a CMMS webhook</text>
+
+    <rect class="svc" x="960" y="432" width="216" height="74" rx="6"/>
+    <text class="h" x="974" y="456">Systems Manager</text>
+    <text class="s" x="974" y="474">deploy, benchmark, evaluate</text>
+    <text class="s" x="974" y="490">without SSH keys</text>
+  </g>
+  <path class="ln" d="M898 101H956" marker-end="url(#a)"/>
+  <path class="ln" d="M898 189H956" marker-end="url(#a)"/>
+  <path class="ln" d="M898 285H956" marker-end="url(#a)"/>
+  <path class="ln" d="M898 381H956" marker-end="url(#a)"/>
+  <path class="ln" d="M956 469H898" marker-end="url(#a)"/>
+
+  <!-- benchmark strip -->
+  <rect class="box" x="24" y="572" width="1152" height="104" rx="8"/>
+  <text class="h" x="40" y="598">How COOL is measured</text>
+  <text class="t" x="40" y="620">Identical inputs on every machine (bench/inputs). The full ARGUS pipeline and its OpenCV operations, timed on:</text>
+  <rect class="cool" x="40" y="632" width="330" height="32" rx="5"/>
+  <text class="c" x="52" y="653">COOL OpenCV 5 on c8g.xlarge (Graviton4)</text>
+  <rect class="svc" x="388" y="632" width="370" height="32" rx="5"/>
+  <text class="t" x="400" y="653">stock pip OpenCV 5.0.0.93, same c8g.xlarge instance</text>
+  <rect class="svc" x="776" y="632" width="384" height="32" rx="5"/>
+  <text class="t" x="788" y="653">stock OpenCV 5 on c7i.xlarge (x86), optional baseline</text>
+</svg>

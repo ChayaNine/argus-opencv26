@@ -1,0 +1,8 @@
+{
+ "n": 48,
+ "skipped_autofocus_failures": 2,
+ "median_pct_span": 0.057,
+ "p90_pct_span": 0.095,
+ "max_pct_span": 0.192,
+ "median_deg": 0.154
+}

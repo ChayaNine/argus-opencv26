@@ -1,0 +1,2 @@
+# Charts for eval/ and bench/ reports (installed on the instance by bootstrap.sh).
+matplotlib==3.11.2
